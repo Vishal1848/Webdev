@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Hubballi&family=Macondo&family=Roboto:wght@100;300&family=Taviraj:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    /* font-family: "Gilroy"; */
+}
+#main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #8B898B;
+    overflow: hidden;
+}
+#progress{
+    position: fixed;
+    height: 0.6vh;
+    width: 0%;
+    z-index: 99999;
+    background-color: rgba(225, 82, 82, 0.848);
+}
+#menupage{
+    width: 100%;
+    height: 100vh;
+    border-radius: 50%;
+    position: fixed;
+    /* background-color: ; */
+    z-index: 9999999;
+    display: flex;
+    justify-content: space-between;
+    top: 0vh;
+    /* right: 50%; */
+    opacity: 0;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 4s;
+    backdrop-filter: blur(30px);
+}
+#mtext{
+
+    display: flex;
+    flex-direction: column;
+    /* background-color: purple; */
+    font-size: 60px;
+    padding: 80px;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 6s;
+    /* transition-delay: 1.5s; */
+    opacity: 0;
+}
+#mtext a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    /* background-color: red; */
+    width: 100%;
+    padding: 7px;
+}
+#menupage #close{
+    border-radius: 50%;
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    z-index: 999999999;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+#menupage #pimg{
+    background-color: red;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+#pimg .nimg{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    background-color: yellowgreen;
+    flex-shrink: 0;
+}
+#pimg #jk{
+    /* background-color: aquamarine; */
+    background-image: url(https://w0.peakpx.com/wallpaper/402/905/HD-wallpaper-dragon-ball-flying-nimbus-goku.jpg);
+}
+#pimg .nimg:nth-child(2){
+     /* background-color: violet;  */
+     background-image: url(https://lovelytab.com/wp-content/uploads/2019/02/Dragon-Ball-Z-Wallpapers-1024x640.jpg);
+}
+#pimg .nimg:nth-child(3){
+    /* background-color: tomato; */
+    background-image: url(https://images.livemint.com/img/2020/01/23/1600x900/tech3_1579798883853.jpg);
+}
+#pimg .nimg:nth-child(4){
+   
+    background-image: url(https://images-na.ssl-images-amazon.com/images/I/81E1s2lRvmS._AC_UL600_SR600,600_.jpg);
+}
+#nav{
+    /* background-color: red;  */
+    height: 7vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 999999;
+    align-items: center;
+    justify-content: space-between;
+    /* color: white; */
+}
+#nav h4{
+    margin-left: 20px;
+    color: white;
+    font-family: "Montserrat";
+}
+#nav i{
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#main #one{
+    background-color: #8B898B;
+    /* background-image: url(https://images.unsplash.com/photo-1578885136359-16c8bd4d3a8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmlyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60); */
+    background-image: url(https://images.unsplash.com/photo-1547744152-14d985cb937f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-position: center;
+    opacity: 0.8;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+#one h1{
+    position: fixed;
+    color: white;
+    font-size: 60vh;
+    width: 100%;
+    /* we had given height 100% so that image which is animated "color contrast ones image" get alighned with form   */
+    display: flex   ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-shadow: #fff 3px 2px 6px;
+}
+#one .img{
+    position: absolute;
+    left: 48%;
+    top: 50%;
+    transform: translate(-40%,-40%);
+    /* rotate(-30deg) */
+    width: 20vw;
+    height: 25vh;}
+#main #two{
+    background-color: #191618;
+    min-height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+}
+#one .root{
+    transform : rotate(180deg);
+    position: absolute;
+    bottom: -5%;
+    left: 15%;
+    height: 500px;
+    mix-blend-mode: overlay;
+}
+.r{
+    z-index: 3;
+}
+#cat{
+    color: white;
+    padding: 50px 80px;
+    font-size: 30px;
+}
+#cat h2:nth-child(1){
+    margin-left: 200px;
+}
+#cat h2{
+    font-weight: 100;
+}
+#catbox{
+    margin: 0 auto;
+    height: 550px;
+    width: 500px;
+    background-color: #B4A798;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#catbox #crcle{
+    /* overflow: hidden; */
+    position: relative;
+    border-radius: 50%;
+    position: relative;
+    background-color: #191618;
+    width: 60%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#crcles{
+    border-radius: 50%;
+    background-color: #EEA369;
+    position: relative;
+    height: 15%;
+    width: 15%;
+    color: #EEA369;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#n{
+    text-shadow: goldenrod 5px 5px 10px;
+    font-weight: 100;
+    font-family: "voyage";
+}
+#catbox p{
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    right: -40%;
+    top: 15%;
+    font-weight: 200;
+}
+#one .p{
+    position: fixed;
+    font-size: 8px;
+    color: white;
+    top: 20%;
+    right: 35%;
+}
+#catbox .c{
+    position: absolute;
+    left: 0%;
+    bottom: -10%;
+    font-size: 40px;
+    color: white;
+}
+#footer{
+    color: white;
+    padding: 70px 10px;
+    
+}
+#footer #textf{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+#textf h1{
+    font-size: 50px;
+}
+#textf h4{
+    font-size: 20px;
+}
+
+#crcle .one{
+    position: absolute;
+    width: 300px;
+}
+#crcle .two{
+    position: absolute;
+    width: 210px;
+}
+#crcle .three{
+    position: absolute;
+    width: 450px;
+}
+#slide{
+    height: 100vh;
+    width: 100%;
+    background-color: #191618;
+    /* background-color: red; */
+    position: relative;
+}
+.photo{
+    background-color: yellow;
+    background-image: url(https://images.unsplash.com/photo-1591293836027-e05b48473b67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-size: cover;
+    background-position: top;
+    height: 50vh;
+    width: 170px;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 12px;
+}
+#photu{
+    /* background-color: white;    */
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0%,-50%);
+}
+.photu1{
+    background-color: yellowgreen;
+
+    height: 50vh;
+    width: 170px;
+    margin-right: 30px;
+    border-radius: 12px;
+}
+#a{
+   background-image: url(https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-size: cover;
+    background-position: center;
+}
+#m{
+    background-size: cover;
+    background-position: center;
+background-image: url(https://images.unsplash.com/photo-1606942790567-5783bab8d944?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80);
+}
+#l{
+    background-size: cover;
+    background-position: center;
+ background-image: url(https://images.unsplash.com/photo-1591293835940-934a7c4f2d9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+}
+#z{
+    background-size: cover;
+background-image: url(https://images.unsplash.com/photo-1610831176233-ff0dbf203815?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80);
+}
+#hey{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #191618;
+    /* background-color: red; */
+    position: relative;
+}
+#hey h1{
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -2%;
+    left: 50%;
+    transform: translate(-50%,0);
+
+}
+#hey h1 span{
+    font-weight: 100;
+    font-family: "VoyageBoldW00-Regular";
+    font-size: 130px;
+}
+h1 #y{
+    margin-right: 30px;
+}
+#strip{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.strips{
+    width: 60px;
+    height: 12vh;
+    background-color: yellow;
+    border: 1px solid whitesmoke;
+    opacity: 0;
+    background-position: center;
+    background-size: cover;
+    transition: transform .2s;
+}
+
+#strip1{
+    background-color: red;
+   background-image: url(https://images.unsplash.com/photo-1550806867-e46e8b0c8aaa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+#strip2{
+    background-color: gainsboro;
+background-image: url(https://images.unsplash.com/photo-1559572607-1a34841ee4eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+#strip3{
+    background-color: saddlebrown;
+  background-image: url(https://images.unsplash.com/photo-1622637385417-00da7c636218?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+#strip4{
+    background-color: firebrick;
+  background-image: url(https://images.unsplash.com/photo-1494976351278-20cf4a33d65b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1272&q=80);
+}
+#strip5{
+    background-color: gainsboro;
+background-image: url(https://images.unsplash.com/photo-1540647853907-b5906ff40880?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1286&q=80);
+}
+#strip6{
+    background-color: honeydew;
+  background-image: url(https://images.unsplash.com/photo-1584345959189-e4f251104c06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+}
+#strip7{
+    background-color: khaki;
+    background-image: url(https://images.unsplash.com/photo-1584345959430-586fe4a59753?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+}
+#strip8{
+    background-color: wheat;
+   
+    background-image: url(https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+#strip9{
+    background-color: lavender;
+    background-image: url(https://images.unsplash.com/photo-1576682840448-ab0b32db2800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+}
+#strip10{
+    background-color: violet;
+    background-image: url(https://wallpaperaccess.com/full/2679427.jpg);
+}
+.s :nth-child(2){
+    background-color: #B4A798;
+}
+.s{
+    display: flex;
+}
+#footerr{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #191618;
+    color: white;
+    /* background-color: rebeccapurple; */
+}
+#footerr #text{
+    margin-top: 6vh;
+    margin-left: 3%;
+    font-size: 35px;
+}
+#footerr #right{
+    margin-top: 10%;
+    margin-left: 80%;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    /* cursor: pointer; */
+}
+#footerr #right a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: rgba(225, 82, 82, 0.848);
+    overflow: hidden;
+  }
+#footerr #right a {
+    /* Same as before */
+    background: linear-gradient(to right, rgb(171, 99, 48), rgb(202, 150, 37) 50%, rgba(255, 255, 0, 0.934) 50%);
+  }
+#footerr #right a {
+    /* Same as before */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+  }
+#footerr #right a {
+    /* Same as before */
+    transition: background-position 275ms ease;
+  }
+#footerr #right a:hover {
+    background-position: 0 100%;
+  }
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: rgba(225, 82, 82, 0.848);
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(225, 82, 82, 0.848);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+#footerr #imagefour #e{
+    background-image: url(https://images.unsplash.com/photo-1584345959189-e4f251104c06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+}
+
+#imagefour .imgb:nth-child(2){
+    background-image: url(https://images.unsplash.com/photo-1584345429934-ffeac70d784b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    opacity: 0.9;
+}
+#imagefour .imgb:nth-child(3){
+    background-image: url(https://images8.alphacoders.com/801/thumbbig-801500.webp);
+    opacity: 0.95;
+}
+#footerr #imagefour{
+    height: 50vh;
+    background-color: #8B898B;
+    width: 350px;
+    margin-left: 60px;
+    display: flex;
+    overflow: hidden;
+}
+#imagefour .imgb{
+    opacity: 0.7;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    background-color: red;
+    width: 350px;
+    flex-shrink: 0;
+    /* here we can not do absolute just becaz ek upr ek aur aa jaega so we use display flex to its parent and flex shrink 1 so that ek ke bgl mein ek aa jae */
+}
+
+
+@media only screen and (max-width: 500px) {
+    #one h1{
+        font-size: 15vh;
+        flex-direction: column;
+        text-align: center;
+    }
+    #one .img{
+        height: 10vh;
+        width: 25vw;
+    }
+    #one .p{
+        font-size: 5px;
+        top: 30%;
+    }
+    #cat{
+        font-size: 15px;
+        left: 0;
+    }
+    #cat h2:nth-child(1){
+        margin-left: 0px;
+    }
+    #catbox p{
+        opacity: 0;
+    }
+    #catbox{
+        height: 320px;
+        width: 300px;
+    }
+    #catbox .c{
+        bottom: -15%;
+    }
+    #footer #textf{
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+    #footer #textf h1{
+        font-size: 30px;
+    }
+    #footer #textf h4{
+        font-size: 10px;
+    }
+    #footer #textf p{
+        font-size: 6px;
+    }
+    
+    #pimg .nimg{
+    background-size: contain;
+    background-position: center;
+    }
+    .photo{
+        height: 35vh;
+        width: 150px;
+    }
+    #photu .photu1{
+        height: 35vh;
+        width: 150px;
+    }
+    #one .img{
+        top: 140%;
+        transform: translate(-40%,0);
+    }
+    .strips{
+        width: 35px;
+        height: 8vh;
+    }
+    #hey h1{
+        bottom: 10%;
+    }
+    #hey h1 span{
+        font-size: 80px;
+    }
+    #footerr #imagefour{
+        height: 25vh;
+        width: 250px;
+        margin-left: 30px;
+        margin-top: 50px;
+    }
+    #footerr #imagefour .imgb{
+        height: 25vh;
+        width: 250px;
+    }
+    #footerr #right a{
+        font-size: 20px;
+    }
+    #footerr #right{
+        margin-top: 25%;
+        margin-left: 70%;
+    }
+    #footerr #text{
+        margin-top: 4vh;
+        margin-left: 5%;
+        font-size: 13px;
+    }
+    #crcle .one{
+        width: 180px;
+    }
+    #crcle .two{
+        width: 160px;
+    }
+    #crcle .three{
+        width: 140px;
+    }
+    #menupage{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #menupage #mtext{
+        padding: 100px;
+        align-items: center;
+        font-size: 40px;
+    }
+    #menupage #pimg{
+        height: 30vh;
+    }
+    
+}
